@@ -1,0 +1,290 @@
+{
+  "classification": {
+    "table": [
+      {
+        "Algorithm": "Gradient Boosting",
+        "Part": "B",
+        "Accuracy": 0.6674772036474164,
+        "Precision": 0.6554108051643978,
+        "Recall": 0.6674772036474164,
+        "F1": 0.6506924177460376,
+        "ROC_AUC": 0.7903960304894034
+      },
+      {
+        "Algorithm": "Random Forest",
+        "Part": "B",
+        "Accuracy": 0.6544072948328268,
+        "Precision": 0.6452027259121861,
+        "Recall": 0.6544072948328268,
+        "F1": 0.6463320297283863,
+        "ROC_AUC": 0.7637693307956188
+      },
+      {
+        "Algorithm": "MLP Neural Network",
+        "Part": "B",
+        "Accuracy": 0.6620060790273556,
+        "Precision": 0.647942571745222,
+        "Recall": 0.6620060790273556,
+        "F1": 0.6410964373291529,
+        "ROC_AUC": 0.7830075776475426
+      },
+      {
+        "Algorithm": "Bagging (Decision Tree)",
+        "Part": "B",
+        "Accuracy": 0.6458966565349544,
+        "Precision": 0.6364650097171157,
+        "Recall": 0.6458966565349544,
+        "F1": 0.6388041281554881,
+        "ROC_AUC": 0.7651602211339434
+      },
+      {
+        "Algorithm": "SVC",
+        "Part": "A",
+        "Accuracy": 0.6525835866261398,
+        "Precision": 0.6431761276728686,
+        "Recall": 0.6525835866261398,
+        "F1": 0.6285998931596629,
+        "ROC_AUC": 0.7614966157752403
+      },
+      {
+        "Algorithm": "Decision Tree Classifier",
+        "Part": "A",
+        "Accuracy": 0.6367781155015197,
+        "Precision": 0.6183223205782643,
+        "Recall": 0.6367781155015197,
+        "F1": 0.6096816620680087,
+        "ROC_AUC": 0.7476571894136828
+      },
+      {
+        "Algorithm": "Logistic Regression",
+        "Part": "A",
+        "Accuracy": 0.6291793313069909,
+        "Precision": 0.6126427782194377,
+        "Recall": 0.6291793313069909,
+        "F1": 0.6075614956191927,
+        "ROC_AUC": 0.7397764741634456
+      },
+      {
+        "Algorithm": "KNN Classifier",
+        "Part": "A",
+        "Accuracy": 0.6185410334346505,
+        "Precision": 0.6025690251037064,
+        "Recall": 0.6185410334346505,
+        "F1": 0.6050289693451143,
+        "ROC_AUC": 0.7308111079359241
+      },
+      {
+        "Algorithm": "AdaBoost",
+        "Part": "B",
+        "Accuracy": 0.6282674772036474,
+        "Precision": 0.6077395085627291,
+        "Recall": 0.6282674772036474,
+        "F1": 0.596327228101739,
+        "ROC_AUC": 0.7345397797213226
+      },
+      {
+        "Algorithm": "Naive Bayes",
+        "Part": "A",
+        "Accuracy": 0.24164133738601823,
+        "Precision": 0.5747116198581399,
+        "Recall": 0.24164133738601823,
+        "F1": 0.1827095566934834,
+        "ROC_AUC": 0.639284140646056
+      }
+    ],
+    "selected_model": "Gradient Boosting",
+    "tuned_params": {
+      "subsample": 0.8,
+      "n_estimators": 200,
+      "min_samples_leaf": 10,
+      "max_depth": 4,
+      "learning_rate": 0.1
+    },
+    "before_after": {
+      "Untuned": {
+        "Accuracy": 0.6675,
+        "Precision": 0.6554,
+        "Recall": 0.6675,
+        "F1": 0.6507,
+        "ROC_AUC": 0.7904,
+        "CV_F1 (5-fold)": 0.6451
+      },
+      "Tuned": {
+        "Accuracy": 0.6708,
+        "Precision": 0.6586,
+        "Recall": 0.6708,
+        "F1": 0.6559,
+        "ROC_AUC": 0.8014,
+        "CV_F1 (5-fold)": 0.6524
+      },
+      "Change": {
+        "Accuracy": 0.0033,
+        "Precision": 0.0032,
+        "Recall": 0.0033,
+        "F1": 0.0052,
+        "ROC_AUC": 0.011,
+        "CV_F1 (5-fold)": 0.0074
+      }
+    },
+    "cv_table": {
+      "Gradient Boosting": {
+        "CV_F1_mean": 0.6451,
+        "CV_F1_std": 0.0052,
+        "CV_Accuracy_mean": 0.6621,
+        "CV_ROC_AUC_mean": 0.7856,
+        "Test_F1": 0.6507
+      },
+      "Random Forest": {
+        "CV_F1_mean": 0.6428,
+        "CV_F1_std": 0.0075,
+        "CV_Accuracy_mean": 0.6509,
+        "CV_ROC_AUC_mean": 0.766,
+        "Test_F1": 0.6463
+      },
+      "MLP Neural Network": {
+        "CV_F1_mean": 0.6263,
+        "CV_F1_std": 0.0056,
+        "CV_Accuracy_mean": 0.6449,
+        "CV_ROC_AUC_mean": 0.7702,
+        "Test_F1": 0.6411
+      }
+    },
+    "class_labels": [
+      "Low",
+      "Moderate",
+      "Hit"
+    ],
+    "tier_thresholds_musd": {
+      "Low": "< 0.2",
+      "Moderate": "0.2 \u2013 1.0",
+      "Hit": ">= 1.0"
+    }
+  },
+  "regression": {
+    "table": [
+      {
+        "Algorithm": "Random Forest Regressor",
+        "R2": 0.2326,
+        "RMSE": 1.7913,
+        "MAE": 0.4454,
+        "CV_R2": 0.2038
+      },
+      {
+        "Algorithm": "SVR",
+        "R2": 0.1916,
+        "RMSE": 1.8384,
+        "MAE": 0.3993,
+        "CV_R2": 0.2645
+      },
+      {
+        "Algorithm": "KNN Regressor",
+        "R2": 0.188,
+        "RMSE": 1.8425,
+        "MAE": 0.4824,
+        "CV_R2": 0.1669
+      },
+      {
+        "Algorithm": "Polynomial Regression (deg=2)",
+        "R2": 0.1786,
+        "RMSE": 1.8531,
+        "MAE": 0.5086,
+        "CV_R2": 0.1906
+      },
+      {
+        "Algorithm": "Gradient Boosting Regressor",
+        "R2": 0.1743,
+        "RMSE": 1.8579,
+        "MAE": 0.4547,
+        "CV_R2": 0.2472
+      },
+      {
+        "Algorithm": "Decision Tree Regressor",
+        "R2": 0.1244,
+        "RMSE": 1.9133,
+        "MAE": 0.479,
+        "CV_R2": -0.0383
+      },
+      {
+        "Algorithm": "Ridge Regression",
+        "R2": 0.0745,
+        "RMSE": 1.9671,
+        "MAE": 0.555,
+        "CV_R2": 0.1815
+      },
+      {
+        "Algorithm": "Linear Regression",
+        "R2": 0.0744,
+        "RMSE": 1.9671,
+        "MAE": 0.5552,
+        "CV_R2": 0.1815
+      },
+      {
+        "Algorithm": "ElasticNet Regression",
+        "R2": 0.0699,
+        "RMSE": 1.972,
+        "MAE": 0.5492,
+        "CV_R2": 0.1665
+      },
+      {
+        "Algorithm": "Lasso Regression",
+        "R2": 0.0639,
+        "RMSE": 1.9783,
+        "MAE": 0.554,
+        "CV_R2": 0.1561
+      },
+      {
+        "Algorithm": "Polynomial Regression (deg=3)",
+        "R2": -0.329,
+        "RMSE": 2.3572,
+        "MAE": 0.6175,
+        "CV_R2": -6.6979
+      }
+    ],
+    "gui_model": "Gradient Boosting Regressor (tuned)",
+    "gui_model_r2": 0.1873,
+    "gui_model_mae": 0.4558
+  },
+  "clustering": {
+    "k": 4,
+    "linkage": "ward",
+    "features": [
+      "NA_Sales",
+      "EU_Sales",
+      "JP_Sales",
+      "Other_Sales",
+      "Critic_Count",
+      "User_Count",
+      "Critic_Score",
+      "User_Score"
+    ],
+    "pca_variance": [
+      0.4573,
+      0.184
+    ],
+    "table": [
+      {
+        "Algorithm": "K-Means",
+        "Silhouette": 0.2095,
+        "Davies_Bouldin": 1.4089,
+        "Calinski_Harabasz": 2134.9567,
+        "n_clusters": 4,
+        "Agreement with each other (ARI)": 0.4471
+      },
+      {
+        "Algorithm": "Agglomerative (ward)",
+        "Silhouette": 0.1678,
+        "Davies_Bouldin": 1.527,
+        "Calinski_Harabasz": 1784.2585,
+        "n_clusters": 4,
+        "Agreement with each other (ARI)": 0.4471
+      }
+    ],
+    "n_games": 6894
+  },
+  "dataset": {
+    "rows_raw": 16719,
+    "rows_clean": 16448,
+    "train_rows": 13158,
+    "test_rows": 3290
+  }
+}
