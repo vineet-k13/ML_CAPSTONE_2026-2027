@@ -115,47 +115,13 @@ Fitted on $6,894$ complete titles using 6 log-transformed regional sales & activ
 
 ---
 
-## 4. Repository Structure
+## 4. Environment Setup & How-to-Run Instructions
 
-This repository strictly complies with the capstone organization schema:
-
-```text
-ML_PROJECT/
-├── README.md                               # Project overview, consolidated metrics, setup guide
-├── requirements.txt                         # Pinned Python package dependencies
-├── 23CSE301_ML_26_27_Capstone_Guidelines.pdf # Official capstone syllabus and evaluation rubric
-│
-├── data/
-│   └── Video_Games_Sales_as_at_22_Dec_2016.csv # Primary raw dataset (16,719 rows)
-│
-├── notebooks/
-│   └── ML_Capstone_VideoGameSales.ipynb    # Clean, fully-executed, zero-error master notebook
-│
-├── models/
-│   ├── sales_tier_classifier.joblib        # Deployed Pipeline (Preprocessor + Tuned Gradient Boosting)
-│   ├── global_sales_regressor.joblib       # Indicative Sales Regressor (Tuned GB Regressor)
-│   ├── cluster_points.csv                  # 2D PCA projected coordinates with cluster memberships
-│   ├── cluster_profile.csv                 # Cluster centroid statistics and commercial profiles
-│   ├── classification_comparison.csv       # Consolidated 10-classifier metric export
-│   └── metrics.json                        # Serialized benchmark metrics for GUI consumption
-│
-├── app/
-│   ├── app.py                              # Streamlit interactive application
-│   └── ui.py                               # Custom minimalist aesthetic engine, SVG icons, animations
-│
-└── .streamlit/
-    └── config.toml                         # Warm paper theme & typography configuration
-```
-
----
-
-## 5. Environment Setup & How-to-Run Instructions
-
-### 5.1 Prerequisites
+### 4.1 Prerequisites
 - Python 3.10, 3.11, or 3.12 installed.
 - Recommended: Virtual environment (`venv` or `conda`).
 
-### 5.2 Installation
+### 4.2 Installation
 Clone or navigate to the repository directory and install all dependencies:
 ```bash
 # 1. Create and activate a virtual environment
@@ -166,7 +132,7 @@ source venv/bin/activate    # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 5.3 Executing the Master Jupyter Notebook
+### 4.3 Executing the Master Jupyter Notebook
 The notebook runs end-to-end without interactive prompts and automatically resolves data paths relative to the project root:
 ```bash
 jupyter notebook notebooks/ML_Capstone_VideoGameSales.ipynb
@@ -176,7 +142,7 @@ jupyter notebook notebooks/ML_Capstone_VideoGameSales.ipynb
 jupyter nbconvert --to notebook --execute --inplace notebooks/ML_Capstone_VideoGameSales.ipynb
 ```
 
-### 5.4 Launching the Interactive Web Application (Bonus GUI)
+### 4.4 Launching the Interactive Web Application (Bonus GUI)
 Launch the Streamlit web application:
 ```bash
 streamlit run app/app.py
@@ -185,7 +151,7 @@ Once launched, open your web browser at `http://localhost:8501`.
 
 ---
 
-## 6. Web Application Interface & Design Aesthetics
+## 5. Web Application Interface & Design Aesthetics
 
 The web GUI was designed under modern UI guidelines:
 - **Restrained Editorial Palette:** Warm textured paper background (`#F3F0E8`), high-contrast ink typography (`#1E1D1B`), and a single terracotta/burnt-orange accent (`#C8512A`). Avoids generic AI aesthetics.
@@ -199,7 +165,7 @@ The web GUI was designed under modern UI guidelines:
 
 ---
 
-## 7. Compliance Checklist
+## 6. Compliance Checklist
 
 - [x] **Section A — Review 1 Part B Classification:** All 5 Part-B algorithms implemented and trained on identical split without errors.
 - [x] **Consolidated 10-Model Comparison:** Single unified table comparing Accuracy, Precision, Recall, F1, and ROC-AUC.
